@@ -11,8 +11,14 @@
     <a-scene embedded arjs>
       <!-- Hiroマーカーを認識した時に表示する内容 -->
       <a-marker preset="hiro">
-        <!-- 赤い箱を表示（位置、回転、色を指定） -->
-        <a-box position="0 0.5 0" rotation="0 45 0" color="#EF2D5E"></a-box>
+        <a-box 
+          position="0 0.5 0" 
+          material="color: #4CC3D9; opacity: 0.8;"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear"
+          animation__2="property: position; to: 0 0.8 0; dir: alternate; loop: true; dur: 1000; easing: easeInOutSine">
+        </a-box>
+      
+        <a-cylinder radius="0.5" height="0.01" color="#333" opacity="0.5"></a-cylinder>
       </a-marker>
       <!-- AR用のカメラ -->
       <a-entity camera></a-entity>
