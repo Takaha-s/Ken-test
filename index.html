@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- A-Frame 本体の読み込み -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- AR.js の読み込み -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <!-- ARシーンの定義 -->
+    <a-scene embedded arjs>
+      <!-- Hiroマーカーを認識した時に表示する内容 -->
+      <a-marker preset="hiro">
+        <!-- 赤い箱を表示（位置、回転、色を指定） -->
+        <a-box position="0 0.5 0" rotation="0 45 0" color="#EF2D5E"></a-box>
+      </a-marker>
+      <!-- AR用のカメラ -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
